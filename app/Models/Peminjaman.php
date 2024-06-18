@@ -11,8 +11,13 @@ class Peminjaman extends Model
 
     protected $table = 'peminjamans'; // Nama tabel yang diinginkan
     protected $fillable = [
-        'barang_id', // ID barang yang dipinjam
-        'jumlah',    // Jumlah barang yang dipinjam
+        'no_hp',
+        'nama_peminjam',
+        'nama_barang',
+        'jumlah',
+        'tanggal_pinjam',
+        'tanggal_kembali',
+        'status',
     ];
 
     public function barang()
