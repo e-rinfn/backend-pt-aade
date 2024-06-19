@@ -47,9 +47,10 @@ class BarangController extends Controller
     public function update(Request $request, $id)
     {
         $barang = Barang::findOrFail($id);
-        $barang->nama = $request->nama;
+        $barang->nama_barang = $request->nama_barang;
         $barang->deskripsi = $request->deskripsi;
-        $barang->stok = $request->stok;
+        $barang->jumlah = $request->jumlah;
+        $barang->gambar = $request->gambar;
         $barang->save();
 
         return response()->json($barang, 200);
